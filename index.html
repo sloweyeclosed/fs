@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Школьный портал 2024</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>СЗШ 174 м.Киева</h1>
+      <nav>
+        <ul>
+          <li><a href="#news">Новости</a></li>
+          <li><a href="#schedule">Расписание</a></li>
+          <li><a href="#teachers">Учителя</a></li>
+          <li><a href="#discussion">Обсуждение</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+          <li><a href="#other">Прочее</a></li>
+          <li><a class="cc" href="#">Цiкавi люди</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button id="register-btn">Регистрация</button>
+        <button id="login-btn">Вход</button>
+      </div>
+
+      <div id="user-info" class="user-info" style="display: none">
+        <div id="avatar-display" class="avatar-display"></div>
+        <span id="user-name"></span>
+        <div id="user-class" class="user-class"></div>
+
+        <div
+          id="dropdown-menu"
+          style="
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            width: 150px;
+            top: 50px;
+            right: 0;
+            border-radius: 5px;
+          "
+        >
+          <a href="#">Кабинет</a>
+          <a target="_blank" href="https://t.me/qutth">Помощь</a>
+          <a href="#" id="logout-btn">Выйти</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="interesting-facts">
+        <h2>Цiкавi люди школи 174</h2>
+
+        <div class="fact-card">
+          <img src="narvin.jpg" alt="нарвiн" />
+          <div class="fact-info">
+            <h3>Насiдлайович Нарвiн</h3>
+            <p>Кримськiй татарiк додасть вам загарiк</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+        <div class="fact-card">
+          <img src="bodya.jpg" alt="бодя" />
+          <div class="fact-info">
+            <h3>Пархом Богдан</h3>
+            <p>Ушастая мразота</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+        <div class="fact-card">
+          <img src="mark.png" alt="марк" />
+          <div class="fact-info">
+            <h3>Золович Козар Марк</h3>
+            <p>Очкастая мразота</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+        <div class="fact-card">
+          <img src="hher.png" alt="her" />
+          <div class="fact-info">
+            <h3>Женька Хер</h3>
+            <p>Херсонская мразота</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+        <div class="fact-card">
+          <img src="makron.png" alt="makar" />
+          <div class="fact-info">
+            <h3>Макар рванe очко</h3>
+            <p>Просто мразота</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+        <div class="fact-card">
+          <img src="and.png" alt="andre" />
+          <div class="fact-info">
+            <h3>Ондрiй</h3>
+            <p>Представляющая украiну мразота</p>
+            <a target="_blank" href="">Дізнатися більше</a>
+          </div>
+        </div>
+      </section>
+      <div>
+        <section id="couples-slider">
+          <h2>гэнг фор схуул</h2>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <div class="slide">
+                <img src="makar.png" alt="секас" />
+                <h3>Пахормчук Макрон</h3>
+                <p></p>
+              </div>
+              <div class="slide">
+                <img src="4VIDLA.png" alt="ххх" />
+                <h3>хЕРСОНКИЙ квадрат(мжмб)</h3>
+                <p></p>
+              </div>
+              <div class="slide">
+                <img src="444.png" alt="жу" />
+                <h3>Ж/У</h3>
+                <p>жопастий и ушастий (fake)</p>
+              </div>
+              <div class="slide">
+                <img src="couple4.jpg" alt="Папа марка" />
+                <h3>Папа марка</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="registration-form" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2>Регистрация</h2>
+        <form>
+          <label for="first-name">Имя:</label>
+          <input type="text" id="first-name" name="first-name" required />
+
+          <label for="last-name">Фамилия:</label>
+          <input type="text" id="last-name" name="last-name" required />
+
+          <label for="class">Класс:</label>
+          <select id="class" name="class" required>
+            <option value="" disabled selected>Выберите класс</option>
+            <option value="5А">5А</option>
+            <option value="5Б">5Б</option>
+            <option value="5В">5В</option>
+            <option value="6А">6А</option>
+            <option value="6Б">6Б</option>
+            <option value="6В">6В</option>
+            <option value="7А">7А</option>
+            <option value="7Б">7Б</option>
+            <option value="7В">7В</option>
+            <option value="8А">8А</option>
+            <option value="8Б">8Б</option>
+            <option value="8В">8В</option>
+            <option value="9А">9А</option>
+            <option value="9Б">9Б</option>
+            <option value="9В">9В</option>
+            <option value="10А">10А</option>
+            <option value="10Б">10Б</option>
+            <option value="10В">10В</option>
+            <option value="11А">11А</option>
+            <option value="11Б">11Б</option>
+            <option value="11В">11В</option>
+          </select>
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="avatar">Аватар:</label>
+          <input type="file" id="avatar" name="avatar" accept="image/*" />
+
+          <button type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="login-form" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close-btn" id="close-login-btn">&times;</span>
+        <h2>Вход</h2>
+        <form id="login-form-content">
+          <label for="login-first-name">Имя:</label>
+          <input
+            type="text"
+            id="login-first-name"
+            name="login-first-name"
+            required
+          />
+
+          <label for="login-last-name">Фамилия:</label>
+          <input
+            type="text"
+            id="login-last-name"
+            name="login-last-name"
+            required
+          />
+
+          <label for="login-password">Пароль:</label>
+          <input
+            type="password"
+            id="login-password"
+            name="login-password"
+            required
+          />
+
+          <button type="submit">Войти</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
