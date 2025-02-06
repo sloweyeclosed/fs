@@ -101,7 +101,7 @@ document.getElementById('login-form-content').addEventListener('submit', functio
     return;
   }
 
-    alert(`Добро пожаловать, ${loginFirstName} ${loginLastName}!`);
+   
 
     loginForm.style.display = 'none';
 });
