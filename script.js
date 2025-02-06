@@ -100,9 +100,6 @@ document.getElementById('login-form-content').addEventListener('submit', functio
     alert('Пароль слишком короткий.');
     return;
   }
-
-   
-
     loginForm.style.display = 'none';
 });
 
